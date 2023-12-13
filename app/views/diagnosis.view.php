@@ -28,9 +28,17 @@
       <div class="container">
         <div class="contianer-fluid p-5 m-auto shadow-lg rounded-5 js-diagnosis-result">
 
-        <?php if($diagnosis !== ""): ?>
+        <?php if($diagnosis == 1): ?>
         <div class="col-md-12 text-center mb-4 bg-dark text-white m-auto p-4" style="max-width: 500px;">
-          <?= $diagnosis ?>
+          <?= 'Diagnosis: ' . "Conjunctivitis" ?>
+          <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#fullscreenModal">
+              Click to see more
+          </button>
+        </div>
+        
+        <?php elseif($diagnosis == 0):?>
+          <div class="col-md-12 text-center mb-4 bg-dark text-white m-auto p-4" style="max-width: 500px;">
+          <?= 'Diagnosis: ' . "No Conjunctivitis" ?>
           <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#fullscreenModal">
               Click to see more
           </button>
@@ -39,7 +47,7 @@
 
 
 
-          <form class="row g-3"  method="post">
+        <form class="row g-3"  method="post">
 
                 <div class="col-md-6">
                   <div class="">
@@ -186,9 +194,18 @@
                   <button type="submit"   class="btn btn-outline-dark js-submit">Diagnose</button>
                   <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
                 </div>
+              </form>
+            </div>
+        </form>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        </div>
+      </div>
+    </section>
 
-                <!-- Fullscreen Modal -->
-                <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+                    <!-- Fullscreen Modal -->
+                    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-fullscreen">
                     <div class="modal-content">
 
@@ -214,7 +231,7 @@
                               </h2>
                               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="symptom" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                  <?=$diagnosis?>
+                                  <?= 'Diagnosis: ' . "Conjunctivitis" ?>
                                   <p class="text-muted text-white">
                                     <i class="fa fa-warning"></i>
                                     If you are experiencing new, severe, or persistent symptoms, contact a health care provider.
@@ -266,7 +283,7 @@
                             </div>
                           </div>
 
-                        <?php else: ?>
+                        <?php elseif($diagnosis == 0): ?>
                           <!-- Accordion Item 1 -->
                           <div class="accordion-item">
                             <h2 class="accordion-header" id="symptom">
@@ -276,14 +293,14 @@
                               </h2>
                               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="symptom" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                  <?=$diagnosis?>
+                                  <?= 'Diagnosis: ' . "No Conjunctivitis" ?>
                                   <p class="text-muted text-white">
                                     <i class="fa fa-warning"></i>
                                     If you are experiencing new, severe, or persistent symptoms, contact a health care provider.
                                   </p>
                               </div>
                             </div>
-                          </div>
+                          </div>                          
                         <?php endif; ?>
 
                         </div>
@@ -295,15 +312,6 @@
                   </div>
                 </div>
 
-              </form>
-            </div>
-        </form>
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        </div>
-      </div>
-    </section>
 
   </main>
   <!-- End #main -->

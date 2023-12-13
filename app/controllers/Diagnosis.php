@@ -43,12 +43,12 @@ class Diagnosis
 	{
 		if($diagnosis == 1)
 		{
-			return 'Diagnosis: ' . "Conjunctivitis";
+			return $diagnosis;
 			
 		
 		}elseif($diagnosis == 0){
 		
-			return 'Diagnosis: ' . "No Conjunctivitis";
+			return $diagnosis;
 		}
 	}
 

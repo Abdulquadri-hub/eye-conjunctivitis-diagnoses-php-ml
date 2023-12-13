@@ -62,6 +62,19 @@
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h3>About This Project</h3>
             <p>Our Eye Conjunctivitis Online Diagnosis System offers experts in the field a comprehensive and accessible platform to evaluate cognitive health.With a strong emphasis on accuracy, our user-friendly system enables experts to access a range of tools and resources specifically designed for cognitive assessments. By leveraging our thoughtfully developed interface, experts can navigate through a series of targeted questions, tailored to assess various aspects of cognitive function. These results serve as invaluable indicators, providing experts with deeper insights into an individual’s cognitive abilities and aiding in their diagnostic process..</p>
+
+            <h3>Technologies</h3>
+            <p class="d-flex">
+                <img src="<?=ROOT?>/assets/images/html and css.png" width="200" alt="image here" class="img-fluid">
+                <img src="<?=ROOT?>/assets/images/bootstrap.png" width="200" alt="image here" class="img-fluid">
+            </p>
+            <p class="d-flex">
+            <img src="<?=ROOT?>/assets/images/javascript.jpeg" width="200" alt="image here" class="img-fluid">
+            </p>
+            <p class="d-flex">
+            <img src="<?=ROOT?>/assets/images/php.jpeg" width="200" alt="image here" class="img-fluid">
+              <img src="<?=ROOT?>/assets/images/php-ml.jpg" width="200" alt="image here" class="img-fluid">
+            </p>
           </div>
         </div>
       </div>
